@@ -1,0 +1,1 @@
+This is the Camper Leaderboard project
