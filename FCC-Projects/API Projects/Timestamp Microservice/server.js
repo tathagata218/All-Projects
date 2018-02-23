@@ -7,7 +7,13 @@ const PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
+app.get('/:data',(req, res)=>{
+    let data = req.params
+    
+    res.json({
+        receivedData : data
+    });
+})
 
 
 
