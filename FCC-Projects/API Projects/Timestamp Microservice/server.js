@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require("path");
 const app = express();
 const PORT = 3000;
 
@@ -9,7 +10,7 @@ app.use(bodyParser.json())
 
 
 app.get('/',(req,res)=>{
-res.sendFile('./index.html')
+res.sendFile(path.join(__dirname,'/index.html'));
 })
 
 app.get('/:data',(req, res)=>{
