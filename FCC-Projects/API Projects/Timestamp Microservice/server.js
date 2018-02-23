@@ -25,7 +25,7 @@ app.get('/:date',(req, res)=>{
             TimeEntered : data.date
         });
     }
-    else if(moment(data.date).isValid()){
+    else if(moment.unix(data.date).isValid()){
         res.json({
             unix : data.date, 
             receivedData : moment.unix(data.date).format("MMMM DD YYYY")
@@ -37,7 +37,7 @@ app.get('/:date',(req, res)=>{
         })
     }
     
-    console.log(data);
+  
 })
 
 
