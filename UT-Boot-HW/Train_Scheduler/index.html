@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train-Scheduler</title>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+<script src="app.js"></script>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>The Train Scheduler</h1>
+            <p>This app updates and maintaines a train schedule</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                    <div class="panel panel-default">
+                            <div class="panel-heading">Current Train Schedule</div>
+                            <div class="panel-body">
+                            <div id="listDisplay" class="row">
+                               <div class="col-xs-2 col-xs-offset-1 trainList"><h6>Train Name</h6><div id="nameOfTrain"></div></div>
+                               <div  class="col-xs-2 trainList"><h6>Destination</h6><div id="descriptionOfTrain"></div></div>
+                               <div  class="col-xs-2 trainList"><h6>Frequency (min)</h6><div id="FrequencyOfTrain"></div></div>
+                               <div  class="col-xs-2 trainList"><h6>Next Arrival</h6><div id="arrivalOfTrain"></div></div>
+                               <div  class="col-xs-2 trainList"><h6>Minutes Away</h6><div id="minutesOfTrain"></div></div> 
+                            </div>
+
+
+                            </div>
+                            </div> 
+                <div class="form-group">
+                    <div class="panal-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">Add Train Information</div>
+                    <div class="panel-body">
+                        <label >Train Name:</label>
+                        <input type="text" class="form-control" id="nameTrain">
+                        <label >Destination:</label>
+                        <input type="text" class="form-control" id="destinationTrain">
+                        <label >Frist Train Time(Mlilitary Time) :</label>
+                        <input type="text" class="form-control" id="timeTrain">
+                        <label >Frequency (min):</label>
+                        <input type="number" class="form-control" id="frequencyTrain">
+                        <input style="margin-top:10px;" type="button" id="clickToAddTrain" value="Submit" class="btn btn-md btn-primary">
+                        <input style="margin-top:10px;" type="button" id="clickToClear" value="Clear" class="btn btn-md btn-primary">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

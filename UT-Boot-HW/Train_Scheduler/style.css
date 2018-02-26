@@ -1,0 +1,9 @@
+.trainList{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    border-right: 1px solid rgba(45, 92, 207, 0.54); 
+}
+#listDisplay :last-child {
+border-right: none;
+}
