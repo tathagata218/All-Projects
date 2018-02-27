@@ -11,10 +11,16 @@ app.use(bodyParser.json());
 
 app.get('/',(req,res)=>{
     console.log(req.headers);
+    console.log(req.headers.connection);
+    console.log(req.headers.location);
+    console.log(req.headers["accept-language"]);
+    console.log(req.headers["user-agent"]);
     const data = {
-        
-    }
-    res.json({message : 'It works'})
+        ipaddress : req.ip,
+        language : req.headers["accept-language"],
+        'software' : req.headers["user-agent"],
+    };
+    res.json(data);
 });
 
 app.listen(PORT,()=>{
