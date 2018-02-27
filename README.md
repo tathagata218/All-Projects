@@ -8,7 +8,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 2. [Camper Leaderboard](FCC-Projects/React%20Projects/Camper%20Leaderboard)
 3. [Recipe Box](FCC-Projects/React%20Projects/Recipe%20Box)
 4. [Game of Life](FCC-Projects/React%20Projects/Game%20of%20Life)
-5. [Rougelike Dungeon Crawler Game](FCC-Projects/React%20Projects/Rouguelike%20Dungeon%20Crawler%20Game)
+5. [Roguelike Dungeon Crawler Game](FCC-Projects/React%20Projects/Roguelike%20Dungeon%20Crawler%20Game)
 
 ### API Projects
 1. [Timestamp Microservice](FCC-Projects/API%20Projects/Timestamp%20Microservice)
