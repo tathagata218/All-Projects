@@ -6,7 +6,8 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 ### React Projects
 1. [Markdown Previewer](FCC-Projects/React%20Projects/Markdown%20Previewer)
 2. [Camper Leaderboard](FCC-Projects/React%20Projects/Camper%20Leaderboard)
-3. [Camper Leaderboard](FCC-Projects/React%20Projects/Recipe%20Box)
+3. [Camper Leaderboard](FCC-Projects/React%20Projects/Recipe%20Box
+4. [Camper Leaderboard](FCC-Projects/React%20Projects/Game%20Of%20Life)
 
 ### API Projects
 1. [Timestamp Microservice](FCC-Projects/API%20Projects/Timestamp%20Microservice)
