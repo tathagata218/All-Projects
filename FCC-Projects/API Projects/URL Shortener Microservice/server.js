@@ -13,8 +13,17 @@ app.get('/',(req,res)=>{
     })
 
 app.get(':/urlData',(req,res)=>{
+    let clientData = req.params;
     const regularExp = /^(https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm
-
+    if(regularExp.test(clientData.urlData)){
+        //if false
+    }
+    else{
+        res.json({
+            original_URL : clientData.urlData,
+            short_url : 'Short URL'
+        })
+    }
     let clientData = req.params;
 });
 
