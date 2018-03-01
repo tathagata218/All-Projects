@@ -7,3 +7,13 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+app.get(':/urlData',(req,res)=>{
+
+});
+
+
+
+app.listen(PORT,()=>{
+    console.log(`You are lisining to $(PORT)`);
+})
