@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.get(':/urlData',(req,res)=>{
-
+    let clientData = req.params;
 });
 
 

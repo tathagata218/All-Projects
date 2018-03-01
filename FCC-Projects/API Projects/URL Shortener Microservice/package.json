@@ -8,5 +8,8 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "goo.gl": "^0.1.4"
   }
 }
