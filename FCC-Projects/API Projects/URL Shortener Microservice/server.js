@@ -13,6 +13,8 @@ app.get('/',(req,res)=>{
     })
 
 app.get(':/urlData',(req,res)=>{
+    const regularExp = /^(https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm
+
     let clientData = req.params;
 });
 
