@@ -30,5 +30,5 @@ app.get(':/urlData',(req,res)=>{
 
 
 app.listen(PORT,()=>{
-    console.log(`You are lisining to $(PORT)`);
+    console.log(`You are lisining to ${PORT}`);
 })
