@@ -24,7 +24,7 @@ app.get(':/urlData',(req,res)=>{
             short_url : 'Short URL'
         })
     }
-    let clientData = req.params;
+   
 });
 
 
