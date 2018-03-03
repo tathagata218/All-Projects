@@ -17,8 +17,8 @@ app.get('/',(req,res)=>{
 app.get('/new/:urlData',(req,res)=>{
     let clientData = req.params;
     const regularExp = /^(https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm
-    if(regularExp.test(clientData.urlData)){
-        //if false
+    if(regularExp.test(clientData.urlData)==false){
+   
         res.json({message:'Invalid URL'})
     }
     else{
