@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const PORT = 3000;
 const app = express();
 const multer = require('multer');
+const upload = multer({dest : 'uploades'});
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
