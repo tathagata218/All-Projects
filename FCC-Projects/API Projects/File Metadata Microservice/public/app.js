@@ -8,11 +8,10 @@ $('#file').change(function(){
 
 $('#submitBtn').click(function(){
 
-    let fileData = {fileData : 'This will be the file data'};
-    let testfile = $('#file')["0"].files['0'];
-    console.log(testfile);
-  $.post('/fileData', fileData,()=>{
-      console.log('Yes it works');
+    let testfile = $('#file')["0"];
+    
+  $.post('/fileData', testfile,()=>{
+      console.log('Data Has been sent');
   });
     
     });
