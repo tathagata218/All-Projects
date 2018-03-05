@@ -1,9 +1,19 @@
 $(function(){
 
-$('#submitBtn').click(function(){
-    let fileData = 'This will be the file data';
+$('#file').change(function(){
+    let testfile = $('#file')["0"].files['0'].name;
+    $('#displayfiles').html(testfile);
+});
 
-  $.post('/fileData', fileData);
+
+$('#submitBtn').click(function(){
+
+    let fileData = {fileData : 'This will be the file data'};
+    let testfile = $('#file')["0"].files['0'];
+    console.log(testfile);
+  $.post('/fileData', fileData,()=>{
+      console.log('Yes it works');
+  });
     
     });
 
