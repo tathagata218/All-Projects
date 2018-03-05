@@ -25,6 +25,7 @@ app.get('/',(req,res)=>{
 
 app.post('/fileData',(req,res)=>{
    console.log (req.file);
+   res.sendStatus(200);
 
 })
 

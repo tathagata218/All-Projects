@@ -8,7 +8,14 @@ $('#file').change(function(){
 
 $('#submitBtn').click(function(){
 
-    let testfile = $('#file')["0"];
+    let testfile = $('#file')["0"].files;
+    let testObject = {
+      fileInfo : $('#file')["0"],
+      fileData : $('#file')["0"].files,
+      fileSpecsData : $('#file')["0"].files['0'],
+
+    }
+    console.log(testObject);
     
   $.ajax({
     method : "POST",  
