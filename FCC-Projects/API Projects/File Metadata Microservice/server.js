@@ -5,13 +5,15 @@ const PORT = 3000;
 const app = express();
 const multer = require('multer');
 const storage = multer.diskStorage({
-    destination : './uploades',
-    filename : (req,res,next)=>{
-        next(null)
-
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
-})
-const upload = multer({dest : 'uploades/'});
+});
+const upload = multer({ storage: storage }).single();
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
@@ -21,9 +23,9 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'./public/index.html'));
 });
 
-app.post('/fileData',upload.any(),(req,res)=>{
-    console.log(req.file);
-    res.sendStatus(200);
+app.post('/fileData',(req,res)=>{
+   console.log (req.file);
+
 })
 
 app.listen(PORT,()=>{
