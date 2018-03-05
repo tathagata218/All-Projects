@@ -10,9 +10,14 @@ $('#submitBtn').click(function(){
 
     let testfile = $('#file')["0"];
     
-  $.post('/fileData', testfile,()=>{
-      console.log('Data Has been sent');
-  });
+  $.ajax({
+    method : "POST",  
+    URL:'/fileData',
+    data : testfile,
+    contentType : 'multipart/form-data'  
+  }).done(()=>{
+    console.log('Data Has been sent');
+  })
     
     });
 
