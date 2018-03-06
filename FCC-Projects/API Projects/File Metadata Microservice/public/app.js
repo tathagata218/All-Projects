@@ -26,8 +26,11 @@ $('#submitBtn').click(function(e){
     URL:'/fileData',
     processData: false,
     contentType: false,
+    cache :false,
     data : test2,
-    dataType : JSON
+    success: function (){
+      console.log('uploded')
+    }
   }).done(()=>{
     console.log('Data Has been sent');
   })
