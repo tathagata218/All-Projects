@@ -10,8 +10,8 @@ module.exports = {
         output : {
             path : path.resolve(__dirname,'client'),
             filename : 'js/[name].js'
-        }
-    }
+        },
+    
     module : {
         rules : [
             {
