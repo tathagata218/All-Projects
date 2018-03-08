@@ -16,10 +16,10 @@ module.exports = {
         rules : [
             {
                 test : /\.(css)$/,
-                use : extraTextPlugin({
+                use : extraTextPlugin.extract({
                     fallback : 'style-loader',
                     use : ['css-loader'],
-                    publicPath : '.build'
+                    publicPath : './build'
                 })
             },
 
@@ -31,7 +31,7 @@ module.exports = {
         ]
     },
     
-    Plugins : [
+    plugins : [
         new htmlwebpackplugin({
             title : "Camper Leaderboard",
             minify : {
@@ -44,8 +44,9 @@ module.exports = {
 
         new extraTextPlugin({
             filename : 'css/[name].css',
-            allChunks : ture,
-            disable : false
+            allChunks : true,
+            disable : false,
+            ignoreOrder : true 
             
         }),
 
