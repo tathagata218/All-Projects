@@ -12,7 +12,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 
 ### Data Visualization Projects
-1. [Across the Globe]
+1. [Across the Globe](FCC-Projects/Data%20Visualization%20Projects/Across%20the%20Globe)
 2. [Bar Chart]
 3. [Force Directed Graph]
 4. [Heat Map]
@@ -21,6 +21,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 1. [Timestamp Microservice](FCC-Projects/API%20Projects/Timestamp%20Microservice)
 2. [Request Header Parser Microservice](FCC-Projects/API%20Projects/Request%20Header%20Parser%20Microservice)
 
+## FCC-Algotithm
 
 ## UT-BootCamp Projects
 ## UT-BootCamp HW
