@@ -1,7 +1,11 @@
 {
-  "name": "Camper Leaderboard",
+  "name": "camperLeaderboard",
   "version": "1.0.0",
   "description": "This is the Camper Leaderboard project",
+  "scripts": {
+    "prod": "npm run webpack -p",
+    "start": "webpack-dev-server"
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -13,7 +17,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "sass-loader": "^6.0.7",
-    "webpack": "^4.1.1"
+    "webpack": "^4.1.1",
+    "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
