@@ -15,6 +15,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 1. [Across the Globe]
 2. [Bar Chart]
 3. [Force Directed Graph]
+4. [Heat Map]
 ### API Projects
 1. [Timestamp Microservice](FCC-Projects/API%20Projects/Timestamp%20Microservice)
 2. [Request Header Parser Microservice](FCC-Projects/API%20Projects/Request%20Header%20Parser%20Microservice)
