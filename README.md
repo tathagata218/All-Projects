@@ -10,6 +10,8 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 4. [Game of Life](FCC-Projects/React%20Projects/Game%20of%20Life)
 5. [Roguelike Dungeon Crawler Game](FCC-Projects/React%20Projects/Roguelike%20Dungeon%20Crawler%20Game)
 
+
+### Data Visualization Projects
 ### API Projects
 1. [Timestamp Microservice](FCC-Projects/API%20Projects/Timestamp%20Microservice)
 2. [Request Header Parser Microservice](FCC-Projects/API%20Projects/Request%20Header%20Parser%20Microservice)
