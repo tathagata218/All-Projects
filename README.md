@@ -15,7 +15,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 1. [Across the Globe](FCC-Projects/Data%20Visualization%20Projects/Across%20the%20Globe)
 2. [Bar Chart](FCC-Projects/Data%20Visualization%20Projects/Bar%20Chart)
 3. [Force Directed Graph](FCC-Projects/Data%20Visualization%20Projects/Force%20Directed%20Graph)
-4. [Heat Map]
+4. [Heat Map](FCC-Projects/Data%20Visualization%20Projects/Heat%20Map)
 5. [Scatterplot Graph]
 ### API Projects
 1. [Timestamp Microservice](FCC-Projects/API%20Projects/Timestamp%20Microservice)
