@@ -1,23 +1,25 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import {Page, RaisedButton} from 'material-ui/'
+import {Paper, RaisedButton} from 'material-ui/'
 import { Table,TableBody,TableHeader,TableHeaderColumn,TableRow,TableRowColumn} from  'material-ui/Table'
 class App extends Component {
     state = {
         allTimePoints: [],
-        past30days : []
+        past30days : [],
+        render: false
     }
 
     componentWillMount () {
-        this.getInfo()
+        //this.getInfo()
     }
 
     getInfo()   {
         axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent').then((data)=>{
             this.setState({
-                fccLeaderboardData : data
+                fccLeaderboardData : data.data,
+                render : true
             })
-
+            this.render()
 
         }).catch((err)=>{
             console.log(err);
@@ -27,22 +29,29 @@ class App extends Component {
 
 render() {
     
-    return(
-        <div>
-        <h1>Camper Learderboard</h1>
-        <Paper>
-        <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHeaderColumn>Camper Name</TableHeaderColumn>
-            <TableHeaderColumn><a onClick={this.sortPoints}>Points in Past 30 Days</a></TableHeaderColumn>
-            <TableHeaderColumn><a onClick={this.sortPoints}>All Time Points</a></TableHeaderColumn>
-          </TableRow>
-        </TableHeader>
-        </Table>
-        </Paper>
-        </div>
-    )
+    if(this.state.render){
+
+        return(
+    
+            <div>
+            <h1>Camper Learderboard</h1>
+            
+            </div>
+        )
+    }
+
+    else{
+        this.state.fccLeaderboardData.map((data)=>{
+            return(
+                <div>
+                <h1>Campers Leaderboard</h1>
+                <Paper>
+                </Paper>
+                </div>
+            )
+        })
+    }
+    
 }
 
 }
