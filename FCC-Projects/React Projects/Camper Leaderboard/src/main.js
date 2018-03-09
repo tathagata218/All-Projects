@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import {Paper, RaisedButton} from 'material-ui/'
 import { Table,TableBody,TableHeader,TableHeaderColumn,TableRow,TableRowColumn} from  'material-ui/Table'
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 class App extends Component {
     state = {
         allTimePoints: [],
@@ -46,6 +47,12 @@ render() {
                 <div>
                 <h1>Campers Leaderboard</h1>
                 <Paper>
+                <BootstrapTable  ref='table' data={products}>
+                    <TableHeaderColumn dataField ='id' idKey={true}> Member ID</TableHeaderColumn>
+                    <TableHeaderColumn dataField ='info' > Member Name</TableHeaderColumn>
+                    <TableHeaderColumn dataField ='Past30DaysPoints' dataSort={true}>Points in Past 30 Days</TableHeaderColumn>
+                    <TableHeaderColumn dataField ='AllTimePoints' dataSort={true}>All Time Points</TableHeaderColumn>
+                </BootstrapTable>
                 </Paper>
                 </div>
             )
