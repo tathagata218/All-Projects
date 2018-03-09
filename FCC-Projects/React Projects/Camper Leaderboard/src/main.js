@@ -47,7 +47,7 @@ render() {
                 <div>
                 <h1>Campers Leaderboard</h1>
                 <Paper>
-                <BootstrapTable  ref='table' data={products}>
+                <BootstrapTable  ref='table' data={data}>
                     <TableHeaderColumn dataField ='id' idKey={true}> Member ID</TableHeaderColumn>
                     <TableHeaderColumn dataField ='info' > Member Name</TableHeaderColumn>
                     <TableHeaderColumn dataField ='Past30DaysPoints' dataSort={true}>Points in Past 30 Days</TableHeaderColumn>
