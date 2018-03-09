@@ -8,7 +8,13 @@ class App extends Component {
     }
 
     getInfo = ()=>{
-        axios.get('')
+        axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent').then((data)=>{
+            this.setState({
+                fccLeaderboardData : data
+            })
+        }).catch((err)=>{
+            console.log(err);
+        })
     }
 
 
