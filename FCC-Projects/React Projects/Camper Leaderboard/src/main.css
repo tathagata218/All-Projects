@@ -1,0 +1,22 @@
+#heading{
+    text-align: center;
+    padding:  20px;
+}
+
+#div1{
+    text-align:  center;
+}
+
+#ListTable{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width:60%;
+}
+#ListTable td{
+    padding: 8px;
+    
+}
+#ListTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    }

@@ -1,65 +1,83 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import {Paper, RaisedButton} from 'material-ui/'
-import { Table,TableBody,TableHeader,TableHeaderColumn,TableRow,TableRowColumn} from  'material-ui/Table'
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import {Paper, FlatButton, RaisedButton} from 'material-ui/'
+import './main.css'
+//import { Table,TableBody,TableHeader,TableHeaderColumn,TableRow,TableRowColumn} from  'material-ui/Table'
+
+
+
 class App extends Component {
     state = {
         allTimePoints: [],
         past30days : [],
-        render: false
+        render: false,
+        fccLeaderboardData : []
     }
 
     componentWillMount () {
-        //this.getInfo()
-    }
-
-    getInfo()   {
+        
         axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent').then((data)=>{
             this.setState({
                 fccLeaderboardData : data.data,
                 render : true
             })
-            this.render()
+            console.log(this.state)
+            
 
         }).catch((err)=>{
             console.log(err);
         })
     }
 
+    sort = ()=>{
+        console.log('This will be the sort function');
+    }
+
 
 render() {
-    
-    if(this.state.render){
+    return (
+        <div>
+        <h1 id="heading">Leaderboard Information</h1>
+        <div id='div1'>
+        <table id="ListTable">
+                    <tr>
+                    <th>#</th>
+                    <th>Camper Name</th> 
+                    <th > <FlatButton onClick={this.sort} label="Points in Past 30 Days" primary={true} /></th>
+                    <th ><FlatButton onClick={this.sort} label="All time points" primary={true} /> </th>
+                  </tr>
+                 
+                    
+        {this.state.fccLeaderboardData.map((data,index)=>{
+            return(<tr>
+                        <td>{index}</td>
+                        <td>{data.username}</td>
+                        <td>{data.recent}</td>
+                        <td>{data.alltime}</td>
 
-        return(
-    
-            <div>
-            <h1>Camper Learderboard</h1>
+                    
+                    </tr>
+                    
+                
+                    )
             
-            </div>
-        )
-    }
-
-    else{
-        this.state.fccLeaderboardData.map((data)=>{
-            return(
-                <div>
-                <h1>Campers Leaderboard</h1>
-                <Paper>
-                <BootstrapTable  ref='table' data={data}>
-                    <TableHeaderColumn dataField ='id' idKey={true}> Member ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField ='info' > Member Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField ='Past30DaysPoints' dataSort={true}>Points in Past 30 Days</TableHeaderColumn>
-                    <TableHeaderColumn dataField ='AllTimePoints' dataSort={true}>All Time Points</TableHeaderColumn>
-                </BootstrapTable>
-                </Paper>
-                </div>
-            )
-        })
-    }
+        })}
+        </table>
+        </div>
+        </div>
+        
+    )
     
 }
+
+
+
+
+
+    
+    
+    
+
 
 }
 
