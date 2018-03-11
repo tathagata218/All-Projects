@@ -29,34 +29,34 @@ class App extends Component {
         })
     }
 
-    sort = (arr,property) => {
-        // let arrLength = arr.length;
-        // let resultArr = arr;
-        // let check;
+    sort (arr,property)  {
+        let arrLength = arr.length;
+        let resultArr = arr;
+        let check;
         
-        // do {
-        // check = false;
+        do {
+        check = false;
         
-        // for(let i=0; i<arrLength-1; i++){
+        for(let i=0; i<arrLength-1; i++){
         
-        //     if(arr[i][property] > arr[i+1][property]){
-        //         let firstNum = resultArr[i];
-        //         let secondNum = resultArr[i+1];
-        // // In this condition you have make variable defineing one number in a position
-        //       resultArr[i+1]=firstNum;
-        //       resultArr[i]=secondNum;
-        //       check = true;
-        //     }
+            if(arr[i][property] > arr[i+1][property]){
+                let firstNum = resultArr[i];
+                let secondNum = resultArr[i+1];
+        // In this condition you have make variable defineing one number in a position
+              resultArr[i+1]=firstNum;
+              resultArr[i]=secondNum;
+              check = true;
+            }
       
-        // }
-        // }
-        // while(check);
+        }
+        }
+        while(check);
 
-        // this.setState({
-        //     fccLeaderboardData : resultArr
-        // })
+        this.setState({
+            fccLeaderboardData : resultArr
+        })
 
-        // this.render();
+        this.render();
     }
 
 
@@ -72,8 +72,8 @@ render() {
                     <tr>
                     <th>#</th>
                     <th>Camper Name</th> 
-                    <th > <FlatButton onClick={(array, recent) => { this.sort(array,recent)}} label="Points in Past 30 Days" primary={true} /></th>
-                    <th ><FlatButton onClick={(array,alltime)=>{ this.sort(array,alltime)}} label="All time points" primary={true} /> </th>
+                    <th > <FlatButton onClick={ this.sort(array,recent)} label="Points in Past 30 Days" primary={true} /></th>
+                    <th ><FlatButton onClick={ this.sort(array,alltime)} label="All time points" primary={true} /> </th>
                   </tr>
                  
                     
