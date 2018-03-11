@@ -11,12 +11,21 @@
     border-collapse: collapse;
     margin: 0 auto;
     width:60%;
+    
 }
 #ListTable td{
     padding: 8px;
+    border-bottom: 2px solid brown;
+    border-right: 3px solid brown;
+    border-left: 3px solid brown;
+    border-top: 3px solid brown;
     
 }
 #ListTable th {
+    border-bottom: 2px solid brown;
     padding-top: 12px;
     padding-bottom: 12px;
+    border-right: 3px solid brown;
+    border-left: 3px solid brown;
+    border-top: 3px solid brown;
     }

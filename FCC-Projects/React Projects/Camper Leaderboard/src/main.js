@@ -18,10 +18,10 @@ class App extends Component {
         
         axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent').then((data)=>{
             this.setState({
-                fccLeaderboardData : data.data,
-                
+                fccLeaderboardData : data.data
+              
             })
-            console.log(this.state)
+    
             
 
         }).catch((err)=>{
@@ -29,12 +29,13 @@ class App extends Component {
         })
     }
 
-    sort ()  {
+    sort = () =>  {
+        
         let arr = this.state.fccLeaderboardData;
         let arrLength = arr.length;
         let resultArr = arr;
         let check;
-        console.log("you are in the sort function")
+ 
         do {
         check = false;
         
@@ -54,9 +55,41 @@ class App extends Component {
         while(check);
 
         this.setState({
-            fccLeaderboardData : resultArr
+            fccLeaderboardData : resultArr.reverse()
         })
-        console.log("This is after the fccLeaderboarddata")
+       
+        this.render();
+    }
+
+
+    sort2 = () =>  {
+        
+        let arr = this.state.fccLeaderboardData;
+        let arrLength = arr.length;
+        let resultArr = arr;
+        let check;
+        do {
+        check = false;
+        
+        for(let i=0; i<arrLength-1; i++){
+        
+            if(arr[i].alltime > arr[i+1].alltime){
+                let firstNum = resultArr[i];
+                let secondNum = resultArr[i+1];
+        // In this condition you have make variable defineing one number in a position
+              resultArr[i+1]=firstNum;
+              resultArr[i]=secondNum;
+              check = true;
+            }
+      
+        }
+        }
+        while(check);
+
+        this.setState({
+            fccLeaderboardData : resultArr.reverse()
+        })
+ 
         this.render();
     }
 
@@ -68,16 +101,17 @@ render() {
         <h1 id="heading">Leaderboard Information</h1>
         <div id='div1'>
         <table id="ListTable">
+            <tbody>
                     <tr>
                     <th>#</th>
                     <th>Camper Name</th> 
                     <th > <FlatButton onClick={ this.sort} label="Points in Past 30 Days" primary={true} /></th>
-                    <th ><FlatButton onClick={ this.sort} label="All time points" primary={true} /> </th>
+                    <th ><FlatButton onClick={ this.sort2} label="All time points" primary={true} /> </th>
                   </tr>
                  
                     
         {this.state.fccLeaderboardData.map((data,index)=>{
-            return(<tr>
+            return(<tr key={index}>
                         <td>{index}</td>
                         <td>{data.username}</td>
                         <td>{data.recent}</td>
@@ -90,6 +124,7 @@ render() {
                     )
             
         })}
+        </tbody>
         </table>
         </div>
         </div>
