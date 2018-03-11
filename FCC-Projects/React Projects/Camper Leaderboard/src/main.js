@@ -29,17 +29,18 @@ class App extends Component {
         })
     }
 
-    sort (arr,property)  {
+    sort ()  {
+        let arr = this.state.fccLeaderboardData;
         let arrLength = arr.length;
         let resultArr = arr;
         let check;
-        
+        console.log("you are in the sort function")
         do {
         check = false;
         
         for(let i=0; i<arrLength-1; i++){
         
-            if(arr[i][property] > arr[i+1][property]){
+            if(arr[i].recent > arr[i+1].recent){
                 let firstNum = resultArr[i];
                 let secondNum = resultArr[i+1];
         // In this condition you have make variable defineing one number in a position
@@ -55,15 +56,13 @@ class App extends Component {
         this.setState({
             fccLeaderboardData : resultArr
         })
-
+        console.log("This is after the fccLeaderboarddata")
         this.render();
     }
 
 
 render() {
-    let array = this.state.fccLeaderboardData;
-    const recent = "recent"
-    const alltime = "alltime"
+
     return (
         <div>
         <h1 id="heading">Leaderboard Information</h1>
@@ -72,8 +71,8 @@ render() {
                     <tr>
                     <th>#</th>
                     <th>Camper Name</th> 
-                    <th > <FlatButton onClick={ this.sort(array,recent)} label="Points in Past 30 Days" primary={true} /></th>
-                    <th ><FlatButton onClick={ this.sort(array,alltime)} label="All time points" primary={true} /> </th>
+                    <th > <FlatButton onClick={ this.sort} label="Points in Past 30 Days" primary={true} /></th>
+                    <th ><FlatButton onClick={ this.sort} label="All time points" primary={true} /> </th>
                   </tr>
                  
                     
