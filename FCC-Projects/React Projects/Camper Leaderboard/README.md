@@ -3,7 +3,7 @@
 ## Description:
 This is a React Project which shocases all the campers usernames, recent number of browney points and all time browney points.  
 
-### To Start the API
+### To Start the React Project
 1. Clone the Repository to your local Computer
 2. Run git Bash / terminal
 3. Run `npm install` on the unsing git bash/terminal
