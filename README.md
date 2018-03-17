@@ -28,4 +28,4 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 ## UT-BootCamp HW
 ### Algorithems
 1.[Bubble Sort](UT-Boot-HW/Algorithems/BubbleSort)
-2.[Insertion sort]
+2.[Insertion sort](UT-Boot-HW/Algorithems/Insertion%20Sort)
