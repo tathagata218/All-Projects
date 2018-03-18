@@ -25,6 +25,11 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 
 ## Algorithems
+### Sorting Algorithems
 1. [Bubble Sort](Algorithems/BubbleSort)
 2. [Insertion sort](Algorithems/Insertion%20Sort)
 ### FCC-Algotithm
+
+| Intermediate Alogorithems | Advance Algorithem |
+|---|---|
+|   | [Inventory Update](Algorithems/FCC-Algorithem/Inventory_Update) |
