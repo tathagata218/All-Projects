@@ -30,6 +30,11 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 2. [Insertion sort](Algorithems/Insertion%20Sort)
 ### FCC-Algotithm
 
-| Intermediate Alogorithems | Advance Algorithem |
-|---|---|
-|   | [Inventory Update](Algorithems/FCC-Algorithem/Inventory_Update) |
+| Sorting Algorithems |Intermediate Alogorithems | Advance Algorithem |
+|---|---|---|
+| [Bubble Sort](Algorithems/BubbleSort) |  | [Inventory Update](Algorithems/FCC-Algorithem/Inventory_Update) |
+| [Insertion sort](Algorithems/Insertion%20Sort)| | [Make A Person](Algorithems/FCC-Algorithem/Make_A_Person)|
+| | |  [Map The Debries](Algorithems/FCC-Algorithem/Map_The_Debries)|
+| | |  [Pairwise](Algorithems/FCC-Algorithem/Pairwise)|
+| | |  [Record Collection](Algorithems/FCC-Algorithem/Record_Collection)|
+| | |  [Validate US Telephone Numbers](Algorithems/FCC-Algorithem/Validate_US_Telephone_Numbers)|
