@@ -5,9 +5,9 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 ## FCC-Projects
 
-| Data Visulaization || Back End Certification ||
-|---|---|
-|React Projects| Data Visualization| API Projects| Dynamic Web Applications||
+| Data Visulaization                 || Back End Certification                 ||
+| React Projects | Data Visualization | API Projects | Dynamic Web Applications |
+|----------------|--------------------|--------------|--------------------------|
 
 
 ### React Projects
