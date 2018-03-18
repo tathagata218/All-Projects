@@ -5,8 +5,9 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 ## FCC-Projects
 |Data Visualization |    |
-|React Projects          |Data Visulaization               |
 |-------------------|--------------------------|
+|React Projects          |Data Visulaization               |
+
 ### React Projects
 1. [Markdown Previewer](FCC-Projects/React%20Projects/Markdown%20Previewer)
 2. [Camper Leaderboard](FCC-Projects/React%20Projects/Camper%20Leaderboard)
