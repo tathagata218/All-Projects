@@ -5,7 +5,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 ## FCC-Projects
 
-| Data Visulaization                  | Back End Certification                  |
+| Data Visulaization |                 | Back End Certification |                 |
 |----------------|--------------------|-----------------------------------------|
 | React Projects | Data Visualization | API Projects | Dynamic Web Applications |
 
@@ -32,7 +32,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 ## Algorithems
 
 | Sorting Algorithems |Intermediate Alogorithems | Advance Algorithem |
-|---|---|---|
+|---------------------|--------------------------|--------------------|
 | [Bubble Sort](Algorithems/BubbleSort) |  | [Inventory Update](Algorithems/FCC-Algorithem/Inventory_Update) |
 | [Insertion sort](Algorithems/Insertion%20Sort)| | [Make A Person](Algorithems/FCC-Algorithem/Make_A_Person)|
 | | |  [Map The Debries](Algorithems/FCC-Algorithem/Map_The_Debries)|
