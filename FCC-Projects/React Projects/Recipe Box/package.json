@@ -1,0 +1,16 @@
+{
+  "name": "recipebox",
+  "license": "",
+  "description": "This is a React Recipi Page",
+  "repository": {},
+  "version": "1.0.0",
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.1"
+  }
+}
