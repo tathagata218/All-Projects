@@ -14,13 +14,19 @@ class App extends Component {
     }
     
     componentWillMount () {
+        console.log(this)
         if(window.localStorage){
             localStorage.clear()
             }
-        else (
+        else {
             localStorage.setItem('Recipe',recepiInfo)
+            this.setState({
+                Recipe : recepiInfo
+            })
+        }
 
-        )
+
+        
     }
 
     addRecipe = () =>{
@@ -34,8 +40,15 @@ class App extends Component {
     render () {
         return (
             <div>
-            <h1>This is the recipe Box</h1>
-            <RaisedButton label="Secondary" secondary={true} onClick={this.addRecipe} />
+            {this.state.Recipe.map(()=>{
+                return(
+                    <div>
+                    
+                    
+                    
+                    </div>)
+            })}
+            <RaisedButton label="Add" secondary={true} onClick={this.addRecipe} />
             </div>
             
         )
