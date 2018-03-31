@@ -1,5 +1,7 @@
 import React , {Component} from 'react'
 import {Paper, FlatButton, RaisedButton} from 'material-ui/'
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+
 
 const recepiInfo =[
     {
@@ -26,7 +28,7 @@ class App extends Component {
             })
         }
 
-        console.log(this.state)
+        
         
     }
 
@@ -42,13 +44,31 @@ class App extends Component {
         return (
             <div>
             {this.state.Recipe.map((data)=>{
+                
                 return(
                     <div>
-                    {data}
                     
+                    <Card>
+                    <CardHeader
+                      title={data.Recipe}
+                      actAsExpander={true}
+                      showExpandableButton={true}
+                    />
+                    <CardText expandable={true}>
+                    {data.Ingredients.map((ingredients, i)=>{
+                        return (<h3 key={i}>{ingredients}</h3>)
+                    })}
+                        
+                    </CardText>
+                    <CardActions>
+                      <RaisedButton label="Edit" />
+                      <RaisedButton label="Delete" />
+                    </CardActions>
+                    </Card>
                     
                     </div>)
             })}
+            <br/>
             <RaisedButton label="Add" secondary={true} onClick={this.addRecipe} />
             </div>
             
