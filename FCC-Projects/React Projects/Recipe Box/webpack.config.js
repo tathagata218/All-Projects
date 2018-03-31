@@ -13,7 +13,22 @@ module.exports = {
     },
     
     module : {
-        rules : 
+        rules : [
+            {
+                test : /\.(css)$/,
+                use : extraTextPlugin.extract({
+                    fallback : 'style-loader',
+                    use : ['css-loader'],
+                    publicPath : './build'
+                })
+            },
+
+            {
+                test : /\.js$/,
+                exclude : /node_modules/,
+                use : "babel-loader"
+            }
+        ]
     }
     
 }
