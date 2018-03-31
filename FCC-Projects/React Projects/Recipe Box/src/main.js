@@ -1,5 +1,5 @@
 import React , {Component} from 'react'
-
+import {Paper, FlatButton, RaisedButton} from 'material-ui/'
 
 recepiInfo =[
     {
@@ -35,7 +35,9 @@ class App extends Component {
         return (
             <div>
             <h1>This is the recipe Box</h1>
+            <RaisedButton label="Secondary" secondary={true} onClick={this.addRecipe} />
             </div>
+            
         )
     }
 }
