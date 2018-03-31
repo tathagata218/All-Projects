@@ -37,6 +37,9 @@ class App extends Component {
     else {
         localStorage.clear()
         localStorage.setItem('Recipe',JSON.stringify(recepiInfo))
+        this.setState({
+            Recipe : JSON.parse(getData)
+        })
     }
     }
 
@@ -58,9 +61,9 @@ class App extends Component {
             const newData = {Recipe : this.state.NewRecipe, Ingredients : arr}
             this.state.Recipe.push(newData);
             localStorage.setItem('Recipe',JSON.stringify(this.state.Recipe));
-            const getData =  localStorage.getItem('Recipe');
+            const setNewData =  localStorage.getItem('Recipe');
             this.setState({
-                Recipe: JSON.parse(getData)
+                Recipe: JSON.parse(setNewData)
             })
             
            
