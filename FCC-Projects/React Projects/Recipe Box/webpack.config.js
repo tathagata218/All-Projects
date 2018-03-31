@@ -12,6 +12,9 @@ module.exports = {
         filename: "js/[name].js"
     },
     
+    module : {
+        rules : 
+    }
     
 }
 
