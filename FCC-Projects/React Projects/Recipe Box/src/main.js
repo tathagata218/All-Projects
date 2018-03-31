@@ -7,7 +7,6 @@ import TextField from 'material-ui/TextField';
 
 const recepiInfo =[
     {
-    'id' : 1,
     'Recipe' : "Chicken Curry",
     "Ingredients" : ["Curry", "Chicken"]
     }
@@ -21,17 +20,24 @@ class App extends Component {
     }
     
     componentWillMount () {
-        
+        const data = localStorage.getItem('Recipe')
+        const check = JSON.parse(data)
+        if(check.length == 1){
         if(window.localStorage){
-            localStorage.clear()
-            
+                     
         
-            localStorage.setItem('Recipe',JSON.stringify(recepiInfo))
+            
+            const getData =  localStorage.getItem('Recipe');
             this.setState({
-                Recipe : recepiInfo
+                Recipe : JSON.parse(getData)
             })
+            
         }
-
+    }
+    else {
+        localStorage.clear()
+        localStorage.setItem('Recipe',JSON.stringify(recepiInfo))
+    }
     }
 
 
@@ -41,7 +47,27 @@ class App extends Component {
     
       handleClose = () => {
         this.setState({open: false});
+        
       };
+
+      handleSubmitClose = () => {
+        this.setState({open: false});
+        
+        if(this.state.NewRecipe && this.state.NewIngredients){
+            const arr = this.state.NewIngredients.match(/[a-zA-Z]+/gi)
+            const newData = {Recipe : this.state.NewRecipe, Ingredients : arr}
+            const finalData = this.state.Recipe.push(newData);
+            localStorage.setItem('Recipe',JSON.stringify(finalData));
+            console.log(finalData)
+            this.setState({
+                Recipe: finalData
+            })
+            console.log(this.state)
+           
+
+        }
+        this.render()
+      }
 
   
       setItem = (e)=> {
@@ -49,7 +75,7 @@ class App extends Component {
           this.setState({
               [name] : value
           })
-
+          
       }
  
     render () {
@@ -62,7 +88,7 @@ class App extends Component {
             <FlatButton
               label="Submit"
               primary={true}
-              onClick={this.handleClose}
+              onClick={this.handleSubmitClose}
             />,
           ];
         return (
@@ -76,6 +102,7 @@ class App extends Component {
                     <Card>
                     <CardHeader
                       title={data.Recipe}
+                      titleStyle={{"fontSize":"25px"}}
                       actAsExpander={true}
                       showExpandableButton={true}
                     />
@@ -99,7 +126,7 @@ class App extends Component {
         <Dialog
                 title="Add New Recipe"
                 actions={actions}
-                modal={true}
+                 modal={true}
                 open={this.state.open}
                 onRequestClose={this.handleClose}
                     >
