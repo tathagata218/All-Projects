@@ -35,7 +35,7 @@ module.exports = {
 
     Plugins : [
         new htmlwebpackplugin({
-            title : "Camper Leaderboard",
+            title : "Recipe Box",
             minify : {
                 collapseWhitespace : true
             },
