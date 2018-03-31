@@ -33,7 +33,7 @@ module.exports = {
         ]
     },
 
-    Plugin : [
+    Plugins : [
         new htmlwebpackplugin({
             title : "Camper Leaderboard",
             minify : {
