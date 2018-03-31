@@ -33,7 +33,7 @@ module.exports = {
         ]
     },
 
-    Plugins : [
+    plugins : [
         new htmlwebpackplugin({
             title : "Recipe Box",
             minify : {
