@@ -17,8 +17,7 @@ class App extends Component {
     state = {
         Recipe : null,
         open: false,
-        newRecipe : '',
-        newIngrediants :''
+
     }
     
     componentWillMount () {
@@ -46,7 +45,10 @@ class App extends Component {
 
   
       setItem = (e)=> {
-          console.log(e.target)
+          const {name, value} = e.target
+          this.setState({
+              [name] : value
+          })
 
       }
  
