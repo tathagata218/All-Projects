@@ -56,13 +56,13 @@ class App extends Component {
         if(this.state.NewRecipe && this.state.NewIngredients){
             const arr = this.state.NewIngredients.match(/[a-zA-Z]+/gi)
             const newData = {Recipe : this.state.NewRecipe, Ingredients : arr}
-            const finalData = this.state.Recipe.push(newData);
-            localStorage.setItem('Recipe',JSON.stringify(finalData));
-            console.log(finalData)
+            this.state.Recipe.push(newData);
+            localStorage.setItem('Recipe',JSON.stringify(this.state.Recipe));
+            const getData =  localStorage.getItem('Recipe');
             this.setState({
-                Recipe: finalData
+                Recipe: JSON.parse(getData)
             })
-            console.log(this.state)
+            
            
 
         }
