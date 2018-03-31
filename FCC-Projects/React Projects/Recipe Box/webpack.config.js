@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const path  = require('path');
+const htmlwebpackplugin = require('html-webpack-plugin');
+const extraTextPlugin = require('extract-text-webpack-plugin');
 
 
 
@@ -29,7 +31,30 @@ module.exports = {
                 use : "babel-loader"
             }
         ]
-    }
+    },
+
+    Plugin : [
+        new htmlwebpackplugin({
+            title : "Camper Leaderboard",
+            minify : {
+                collapseWhitespace : true
+            },
+            hash: false,
+            inject : true,
+            template : path.resolve(__dirname,"src/index.html")
+        }),
+
+        new extraTextPlugin({
+            filename : 'css/[name].css',
+            allChunks : true,
+            disable : false,
+            ignoreOrder : true 
+            
+        }),
+
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
+    ]
     
 }
 
