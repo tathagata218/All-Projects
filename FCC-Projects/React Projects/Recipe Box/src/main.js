@@ -1,6 +1,8 @@
 import React , {Component} from 'react'
 import {Paper, FlatButton, RaisedButton} from 'material-ui/'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import Dialog from 'material-ui/Dialog';
+import TextField from 'material-ui/TextField';
 
 
 const recepiInfo =[
@@ -13,7 +15,10 @@ const recepiInfo =[
 
 class App extends Component {
     state = {
-        Recipe : null
+        Recipe : null,
+        open: false,
+        newRecipe : '',
+        newIngrediants :''
     }
     
     componentWillMount () {
@@ -28,25 +33,43 @@ class App extends Component {
             })
         }
 
-        
-        
     }
 
-    addRecipe = () =>{
 
-    }
+    handleOpen = () => {
+        this.setState({open: true});
+      };
+    
+      handleClose = () => {
+        this.setState({open: false});
+      };
 
-    deleteIngr = () =>{
+  
+      setItem = (e)=> {
+          console.log(e.target)
 
-    }
-
+      }
+ 
     render () {
+        const actions = [
+            <FlatButton
+              label="Cancel"
+              primary={false}
+              onClick={this.handleClose}
+            />,
+            <FlatButton
+              label="Submit"
+              primary={true}
+              onClick={this.handleClose}
+            />,
+          ];
         return (
             <div>
-            {this.state.Recipe.map((data)=>{
+            <h1 style={{"textAlign":"center"}}>Recipe Box</h1>
+            {this.state.Recipe.map((data,i)=>{
                 
                 return(
-                    <div>
+                    <div key={i}>
                     
                     <Card>
                     <CardHeader
@@ -61,15 +84,36 @@ class App extends Component {
                         
                     </CardText>
                     <CardActions>
-                      <RaisedButton label="Edit" />
-                      <RaisedButton label="Delete" />
+                      <RaisedButton onClick={ ()=>{console.log(this)} } label="Edit" />
+                      <RaisedButton onClick={ ()=>{console.log(this)} }  label="Delete" />
                     </CardActions>
                     </Card>
                     
                     </div>)
             })}
             <br/>
-            <RaisedButton label="Add" secondary={true} onClick={this.addRecipe} />
+            <RaisedButton label="Add" secondary={true} onClick={this.handleOpen} />
+
+        <Dialog
+                title="Add New Recipe"
+                actions={actions}
+                modal={true}
+                open={this.state.open}
+                onRequestClose={this.handleClose}
+                    >
+                    <TextField
+                    hintText="New Recipe "
+                    name="NewRecipe"
+                    floatingLabelText="Recipe"
+                    onChange={this.setItem}
+                    /><br />
+                  <TextField
+                  hintText="New Ingredients"
+                  name="NewIngredients"
+                  floatingLabelText="Ingredients"
+                  onChange={this.setItem}
+                />
+        </Dialog>
             </div>
             
         )
