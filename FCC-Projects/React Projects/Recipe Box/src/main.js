@@ -1,8 +1,9 @@
 import React , {Component} from 'react'
 import {Paper, FlatButton, RaisedButton} from 'material-ui/'
 
-recepiInfo =[
+const recepiInfo =[
     {
+    'id' : 1,
     'Recipe' : "Chicken Curry",
     "Ingredients" : ["Curry", "Chicken"]
     }
@@ -10,22 +11,22 @@ recepiInfo =[
 
 class App extends Component {
     state = {
-
+        Recipe : null
     }
     
     componentWillMount () {
-        console.log(this)
+        
         if(window.localStorage){
             localStorage.clear()
-            }
-        else {
-            localStorage.setItem('Recipe',recepiInfo)
+            
+        
+            localStorage.setItem('Recipe',JSON.stringify(recepiInfo))
             this.setState({
                 Recipe : recepiInfo
             })
         }
 
-
+        console.log(this.state)
         
     }
 
@@ -40,10 +41,10 @@ class App extends Component {
     render () {
         return (
             <div>
-            {this.state.Recipe.map(()=>{
+            {this.state.Recipe.map((data)=>{
                 return(
                     <div>
-                    
+                    {data}
                     
                     
                     </div>)
