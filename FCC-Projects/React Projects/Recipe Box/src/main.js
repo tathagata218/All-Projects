@@ -41,6 +41,9 @@ class App extends Component {
             Recipe : JSON.parse(getData)
         })
     }
+
+    console.log('componentWill mount is hit');
+
     }
 
 
