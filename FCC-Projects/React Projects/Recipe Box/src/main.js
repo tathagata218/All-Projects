@@ -95,15 +95,27 @@ class App extends Component {
       }
 
       editIngrediants (id) {
-        
+        let recipe = localStorage.getItem('Recipe')
+        let arr = JSON.parse(recipe)
         console.log(this)
         console.log(id)
     }
 
       deleteIngrediants (id) {
-        
-          console.log(this)
-          console.log(id)
+        let recipe = localStorage.getItem('Recipe')
+        let arr = JSON.parse(recipe)
+        if(arr.length > 1){
+        arr.splice(id, 1);
+        this.setState({
+            Recipe : arr
+        })
+        localStorage.setItem('Recipe',JSON.stringify(arr))
+        this.render()
+        }
+        else{
+            alert('This is the only Recipe')
+        }
+         
       } 
  
     render () {
