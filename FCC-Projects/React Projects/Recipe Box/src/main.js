@@ -20,29 +20,37 @@ class App extends Component {
     }
     
     componentWillMount () {
+        console.log(localStorage.getItem('Recipe'))
         const data = localStorage.getItem('Recipe')
+        console.log(data)
         const check = JSON.parse(data)
-        if(check.length == 1){
-        if(window.localStorage){
-                     
-        
+        console.log(check)
+        if( !localStorage.getItem('Recipe') || data || check.length === 1){
             
+            localStorage.clear()
+            
+            localStorage.setItem('Recipe',JSON.stringify(recepiInfo))
             const getData =  localStorage.getItem('Recipe');
             this.setState({
                 Recipe : JSON.parse(getData)
             })
-            
-        }
+                     
+        
+          console.log('in the if statements')  
+        
+        
     }
-    else {
+    else if(data && check.length > 1) {
         localStorage.clear()
         localStorage.setItem('Recipe',JSON.stringify(recepiInfo))
-        this.setState({
-            Recipe : JSON.parse(getData)
-        })
+        const getData =  localStorage.getItem('Recipe');
+            this.setState({
+                Recipe : JSON.parse(getData)
+            })
+        console.log('in the else statemets')    
     }
 
-    console.log('componentWill mount is hit');
+        console.log('componentWill mount is hit');
 
     }
 
