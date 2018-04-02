@@ -91,6 +91,14 @@ class App extends Component {
           })
           
       }
+
+      editIngrediants = (i)=> {
+        console.log(i.target)
+      }
+
+      deleteIngrediants = (i) => {
+          console.log(i.ha)
+      } 
  
     render () {
         const actions = [
@@ -121,14 +129,14 @@ class App extends Component {
                       showExpandableButton={true}
                     />
                     <CardText expandable={true}>
-                    {data.Ingredients.map((ingredients, i)=>{
-                        return (<h3 key={i}>{ingredients}</h3>)
+                    {data.Ingredients.map((ingredients, k)=>{
+                        return (<h3 key={k}>{ingredients}</h3>)
                     })}
                         
                     </CardText>
                     <CardActions>
-                      <RaisedButton onClick={ ()=>{console.log(this)} } label="Edit" />
-                      <RaisedButton onClick={ ()=>{console.log(this)} }  label="Delete" />
+                      <RaisedButton card={i} onClick={ this.editIngrediants} label="Edit" />
+                      <RaisedButton card={i} onClick={ function(){console.log(this)}}  label="Delete" />
                     </CardActions>
                     </Card>
                     
