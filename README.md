@@ -7,7 +7,11 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 |Data Visualization |    |
 |-------------------|--------------------------|
 |React Projects          |Data Visulaization               |
-
+|1. [Markdown Previewer](FCC-Projects/React%20Projects/Markdown%20Previewer)||
+|2. [Camper Leaderboard](FCC-Projects/React%20Projects/Camper%20Leaderboard)||
+|3. [Recipe Box](FCC-Projects/React%20Projects/Recipe%20Box)||
+|4. [Game of Life](FCC-Projects/React%20Projects/Game%20of%20Life)||
+|5. [Roguelike Dungeon Crawler Game](FCC-Projects/React%20Projects/Roguelike%20Dungeon%20Crawler%20Game)||
 ### React Projects
 1. [Markdown Previewer](FCC-Projects/React%20Projects/Markdown%20Previewer)
 2. [Camper Leaderboard](FCC-Projects/React%20Projects/Camper%20Leaderboard)
