@@ -13,6 +13,8 @@ const recepiInfo =[
 ]
 
 class App extends Component {
+    
+
     state = {
         Recipe : null,
         open: false,
@@ -92,12 +94,16 @@ class App extends Component {
           
       }
 
-      editIngrediants = (i)=> {
-        console.log(i.target)
-      }
+      editIngrediants (id) {
+        
+        console.log(this)
+        console.log(id)
+    }
 
-      deleteIngrediants = (i) => {
-          console.log(i.ha)
+      deleteIngrediants (id) {
+        
+          console.log(this)
+          console.log(id)
       } 
  
     render () {
@@ -135,8 +141,8 @@ class App extends Component {
                         
                     </CardText>
                     <CardActions>
-                      <RaisedButton card={i} onClick={ this.editIngrediants} label="Edit" />
-                      <RaisedButton card={i} onClick={ function(){console.log(this)}}  label="Delete" />
+                      <RaisedButton card={i} onClick={ ()=>{this.editIngrediants(i)}} label="Edit" />
+                      <RaisedButton card={i} onClick={ ()=>{this.deleteIngrediants(i)}}  label="Delete" />
                     </CardActions>
                     </Card>
                     
