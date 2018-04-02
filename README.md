@@ -4,7 +4,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 ## UT-BootCamp Projects
 
 ## FCC-Projects
-|Data Visualization |    |
+|Data Visualization  :|Data Visualization    :|
 |-------------------|--------------------------|
 |React Projects          |Data Visulaization               |
 |1. [Markdown Previewer](FCC-Projects/React%20Projects/Markdown%20Previewer)|1. [Across the Globe](FCC-Projects/Data%20Visualization%20Projects/Across%20the%20Globe)|
