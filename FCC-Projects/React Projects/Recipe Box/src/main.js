@@ -133,7 +133,11 @@ class App extends Component {
             alert('This is the only Recipe')
         }
          
-      } 
+      }
+      
+      editFinal = () => {
+          
+      }
  
     render () {
         const actions = [
@@ -158,7 +162,7 @@ class App extends Component {
               label="Submit"
               primary={true}
               disabled={false}
-              onClick={this.handleEditClose}
+              onClick={this.editFinal}
             />,
           ];
       
