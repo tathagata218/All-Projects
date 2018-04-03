@@ -189,7 +189,7 @@ class App extends Component {
         <Dialog
                 title="Add New Recipe"
                 actions={actions}
-                 modal={true}
+                modal={true}
                 open={this.state.open}
                 onRequestClose={this.handleClose}
                     >
