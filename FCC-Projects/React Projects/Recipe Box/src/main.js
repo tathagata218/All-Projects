@@ -140,6 +140,20 @@ class App extends Component {
               onClick={this.handleSubmitClose}
             />,
           ];
+          const actions = [
+            <FlatButton
+              label="Cancel"
+              primary={true}
+              onClick={this.handleClose}
+            />,
+            <FlatButton
+              label="Submit"
+              primary={true}
+              disabled={true}
+              onClick={this.handleClose}
+            />,
+          ];
+      
         return (
             <div>
             <h1 style={{"textAlign":"center"}}>Recipe Box</h1>
