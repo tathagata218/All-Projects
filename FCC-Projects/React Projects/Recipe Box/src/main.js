@@ -19,7 +19,8 @@ class App extends Component {
         Recipe : null,
         open: false,
         editOpen : false,
-        indexRecipe:null
+        indexRecipe:null,
+        NewIngredients: null
 
     }
     
@@ -105,17 +106,15 @@ class App extends Component {
       }
 
       editItem = (e)=>{
+          
           const {name, value} = e.target
           this.setState({
               [name] : value
           })
-      }
+        }
 
       editIngrediants (id) {
-        let recipe = localStorage.getItem('Recipe')
-        let arr = JSON.parse(recipe)
-        console.log(this)
-        console.log(id)
+        
         this.setState({
             editOpen: true,
             indexRecipe: id        
@@ -140,18 +139,32 @@ class App extends Component {
       }
       
       editFinal = () => {
-          
-          if(this.state.indexRecipe && this.state.NewIngredients){
-          let index = this.state.indexRecipe
+          this.setState({
+            editOpen : false
+          })
+          if(this.state.NewIngredients){
+            let index = this.state.indexRecipe
             const data1 = localStorage.getItem('Recipe')
+            console.log(data1);
             const data2 = JSON.parse(data1)
-            
+            console.log(data2);
+            const newArr = this.state.NewIngredients.match(/[a-zA-Z]+/gi)
+            data2[index].Ingredients = newArr;
 
+            this.setState({
+                Recipe : data2
+               
+
+            })
+            localStorage.setItem('Recipe',JSON.stringify(data2))
+            console.log(this.state)
+            this.render()
 
             }
             else{
                 console.log('it works')
             }
+            
       }
  
     render () {
@@ -176,7 +189,6 @@ class App extends Component {
             <FlatButton
               label="Submit"
               primary={true}
-              disabled={false}
               onClick={this.editFinal}
             />,
           ];
