@@ -140,17 +140,17 @@ class App extends Component {
               onClick={this.handleSubmitClose}
             />,
           ];
-          const actions = [
+          const editActions = [
             <FlatButton
               label="Cancel"
               primary={true}
-              onClick={this.handleClose}
+              onClick={this.handleEditClose}
             />,
             <FlatButton
               label="Submit"
               primary={true}
               disabled={true}
-              onClick={this.handleClose}
+              onClick={this.handleEditClose}
             />,
           ];
       
