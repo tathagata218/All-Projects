@@ -108,6 +108,7 @@ class App extends Component {
         let arr = JSON.parse(recipe)
         console.log(this)
         console.log(id)
+        this.setState({editOpen: true});
     }
 
       deleteIngrediants (id) {
@@ -176,7 +177,7 @@ class App extends Component {
                         
                     </CardText>
                     <CardActions>
-                      <RaisedButton card={i} onClick={ ()=>{this.editIngrediants(i)}} label="Edit" />
+                      <RaisedButton card={i} onClick={ ()=>{this.editIngrediants(i); this.handleEditOpen}} label="Edit" />
                       <RaisedButton card={i} onClick={ ()=>{this.deleteIngrediants(i)}}  label="Delete" />
                     </CardActions>
                     </Card>
@@ -201,17 +202,17 @@ class App extends Component {
                     /><br />
                   <TextField
                   hintText="New Ingredients"
-                  name="NewIngredients"
+                  name="editIngredients"
                   floatingLabelText="Ingredients"
-                  onChange={this.setItem}
+                  onChange={this.editItem}
                 />
         </Dialog>
 
         <Dialog
-                title="Add New Recipe"
+                title="Edit Ingridients"
                 actions={editActions}
                 modal={true}
-                open={this.state.open}
+                open={this.state.editOpen}
                 onRequestClose={this.handleEditClose}
                     >
                    
