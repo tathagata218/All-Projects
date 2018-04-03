@@ -207,6 +207,22 @@ class App extends Component {
                 />
         </Dialog>
 
+        <Dialog
+                title="Add New Recipe"
+                actions={editActions}
+                modal={true}
+                open={this.state.open}
+                onRequestClose={this.handleEditClose}
+                    >
+                   
+                  <TextField
+                  hintText="New Ingredients"
+                  name="NewIngredients"
+                  floatingLabelText="Ingredients"
+                  onChange={this.setItem}
+                />
+        </Dialog>
+
 
 
             </div>
