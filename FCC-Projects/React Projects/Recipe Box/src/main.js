@@ -18,7 +18,8 @@ class App extends Component {
     state = {
         Recipe : null,
         open: false,
-        editOpen : false
+        editOpen : false,
+        indexRecipe:null
 
     }
     
@@ -115,7 +116,10 @@ class App extends Component {
         let arr = JSON.parse(recipe)
         console.log(this)
         console.log(id)
-        this.setState({editOpen: true});
+        this.setState({
+            editOpen: true,
+            indexRecipe: id        
+        });
     }
 
       deleteIngrediants (id) {
@@ -137,6 +141,17 @@ class App extends Component {
       
       editFinal = () => {
           
+          if(this.state.indexRecipe && this.state.NewIngredients){
+          let index = this.state.indexRecipe
+            const data1 = localStorage.getItem('Recipe')
+            const data2 = JSON.parse(data1)
+            
+
+
+            }
+            else{
+                console.log('it works')
+            }
       }
  
     render () {
