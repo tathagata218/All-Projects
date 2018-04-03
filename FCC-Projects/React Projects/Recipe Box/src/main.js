@@ -18,6 +18,7 @@ class App extends Component {
     state = {
         Recipe : null,
         open: false,
+        editOpen : false
 
     }
     
@@ -64,6 +65,14 @@ class App extends Component {
       handleClose = () => {
         this.setState({open: false});
         
+      };
+
+      handleEditOpen = () => {
+        this.setState({editOpen: true});
+      };
+    
+      handleEditClose = () => {
+        this.setState({editOpen: false});
       };
 
       handleSubmitClose = () => {
@@ -183,6 +192,9 @@ class App extends Component {
                   onChange={this.setItem}
                 />
         </Dialog>
+
+
+
             </div>
             
         )
