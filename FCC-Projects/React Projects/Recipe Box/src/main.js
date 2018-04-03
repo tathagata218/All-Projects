@@ -103,6 +103,13 @@ class App extends Component {
           
       }
 
+      editItem = (e)=>{
+          const {name, value} = e.target
+          this.setState({
+              [name] : value
+          })
+      }
+
       editIngrediants (id) {
         let recipe = localStorage.getItem('Recipe')
         let arr = JSON.parse(recipe)
@@ -150,7 +157,7 @@ class App extends Component {
             <FlatButton
               label="Submit"
               primary={true}
-              disabled={true}
+              disabled={false}
               onClick={this.handleEditClose}
             />,
           ];
@@ -177,7 +184,7 @@ class App extends Component {
                         
                     </CardText>
                     <CardActions>
-                      <RaisedButton card={i} onClick={ ()=>{this.editIngrediants(i); this.handleEditOpen}} label="Edit" />
+                      <RaisedButton card={i} onClick={ ()=>{this.editIngrediants(i)}} label="Edit" />
                       <RaisedButton card={i} onClick={ ()=>{this.deleteIngrediants(i)}}  label="Delete" />
                     </CardActions>
                     </Card>
@@ -204,7 +211,7 @@ class App extends Component {
                   hintText="New Ingredients"
                   name="editIngredients"
                   floatingLabelText="Ingredients"
-                  onChange={this.editItem}
+                  onChange={this.setItem}
                 />
         </Dialog>
 
@@ -220,7 +227,7 @@ class App extends Component {
                   hintText="New Ingredients"
                   name="NewIngredients"
                   floatingLabelText="Ingredients"
-                  onChange={this.setItem}
+                  onChange={this.editItem}
                 />
         </Dialog>
 
