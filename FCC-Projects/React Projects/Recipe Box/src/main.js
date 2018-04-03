@@ -20,7 +20,7 @@ class App extends Component {
         open: false,
         editOpen : false,
         indexRecipe:null,
-        NewIngredients: null
+        editIngredients: null
 
     }
     
@@ -41,7 +41,7 @@ class App extends Component {
             })
                      
         
-          console.log('in the if statements')  
+         
         
         
     }
@@ -52,11 +52,10 @@ class App extends Component {
             this.setState({
                 Recipe : JSON.parse(getData)
             })
-        console.log('in the else statemets')    
+        
     }
 
-        console.log('componentWill mount is hit');
-
+       
     }
 
 
@@ -69,15 +68,13 @@ class App extends Component {
         
       };
 
-      handleEditOpen = () => {
-        this.setState({editOpen: true});
-      };
-    
+        
       handleEditClose = () => {
         this.setState({editOpen: false});
       };
 
       handleSubmitClose = () => {
+          console.log ('it woks')
         this.setState({open: false});
         
         if(this.state.NewRecipe && this.state.NewIngredients){
@@ -98,10 +95,12 @@ class App extends Component {
 
   
       setItem = (e)=> {
-          const {name, value} = e.target
+        console.log(this.state)  
+        const {name, value} = e.target
           this.setState({
               [name] : value
           })
+          
           
       }
 
@@ -113,7 +112,7 @@ class App extends Component {
           })
         }
 
-      editIngrediants (id) {
+      editIngrediants = (id)=> {
         
         this.setState({
             editOpen: true,
@@ -142,13 +141,13 @@ class App extends Component {
           this.setState({
             editOpen : false
           })
-          if(this.state.NewIngredients){
+          if(this.state.editIngredients){
             let index = this.state.indexRecipe
             const data1 = localStorage.getItem('Recipe')
             console.log(data1);
             const data2 = JSON.parse(data1)
             console.log(data2);
-            const newArr = this.state.NewIngredients.match(/[a-zA-Z]+/gi)
+            const newArr = this.state.editIngredients.match(/[a-zA-Z]+/gi)
             data2[index].Ingredients = newArr;
 
             this.setState({
@@ -240,7 +239,7 @@ class App extends Component {
                     /><br />
                   <TextField
                   hintText="New Ingredients"
-                  name="editIngredients"
+                  name="NewIngredients"
                   floatingLabelText="Ingredients"
                   onChange={this.setItem}
                 />
@@ -256,7 +255,7 @@ class App extends Component {
                    
                   <TextField
                   hintText="New Ingredients"
-                  name="NewIngredients"
+                  name="editIngredients" 
                   floatingLabelText="Ingredients"
                   onChange={this.editItem}
                 />
