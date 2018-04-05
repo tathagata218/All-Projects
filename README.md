@@ -23,9 +23,9 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 | Sorting Algorithms                               |Intermediate Alogorithms | Advance Algorithms (FCC)                                                                    |
 |---------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------  |
-| [Bubble Sort](Algorithms/BubbleSort)             |                          | [Inventory Update](Algorithms/FCC-Algorithem/Inventory_Update)                             |
-| [Insertion Sort](Algorithms/Insertion%20Sort)    |                          | [Make A Person](Algorithms/FCC-Algorithem/Make_A_Person)                                   |
-|                                                   |                          |  [Map The Debries](Algorithms/FCC-Algorithem/Map_The_Debries)                              |
-|                                                   |                          |  [Pairwise](Algorithms/FCC-Algorithem/Pairwise)                                            |
-|                                                   |                          |  [Record Collection](Algorithms/FCC-Algorithem/Record_Collection)                          |
-|                                                   |                          |  [Validate US Telephone Numbers](Algorithms/FCC-Algorithem/Validate_US_Telephone_Numbers)  |
+| [Bubble Sort](Algorithms/BubbleSort)             |                          | [Inventory Update](Algorithms/FCC-Algorithm/Inventory_Update)                             |
+| [Insertion Sort](Algorithms/Insertion%20Sort)    |                          | [Make A Person](Algorithms/FCC-Algorithm/Make_A_Person)                                   |
+|                                                   |                          |  [Map The Debries](Algorithms/FCC-Algorithm/Map_The_Debries)                              |
+|                                                   |                          |  [Pairwise](Algorithms/FCC-Algorithm/Pairwise)                                            |
+|                                                   |                          |  [Record Collection](Algorithms/FCC-Algorithm/Record_Collection)                          |
+|                                                   |                          |  [Validate US Telephone Numbers](Algorithms/FCC-Algorithm/Validate_US_Telephone_Numbers)  |
