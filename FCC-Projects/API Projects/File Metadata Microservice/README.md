@@ -2,8 +2,6 @@
 
 This is the File Date Microservice, where users will can upload a any file the computer will display the Size of the file in bytes.
 
-
-
 ### To Start the API
 1. Clone the Repository to your local Computer
 2. Run git Bash / terminal
