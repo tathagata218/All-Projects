@@ -20,7 +20,23 @@
 </body>
 <script type'text/javaScript'>
     function submitFile() {
-        
+        var data = document.getElementById('get_file').files[0]
+
+        if(data.size <= 1364066){
+            var XML = new XMLHttpRequest()
+            var formdata = new FormData()
+
+            XML.open('POST','/fileUpload',true);
+            XML.setRequestHeader('Content-type','application/ X-www-form-urlencoded')
+            XML.send(JSON.stringify({ "FileSize" : data.size}))
+
+
+            XML.onreadystatechange =  () => {
+                if(XML.readyState == 4){
+                    document.getElementById('output').innerHTML = '<table><tr><td> File Size : ' +JSON.parse(XML.responseText).FileSize + ' Bytes </td></tr></table>'
+                }
+            }
+        }
     }
 
 </script>
