@@ -23,7 +23,7 @@ These folders contains all the projects from Free Code Camp and UT coding Bootca
 
 | Sorting Algorithms                                    |Intermediate Alogorithms  | Advance Algorithms (FCC)                                                                  |
 |---------------------------------------------------    |--------------------------|-------------------------------------------------------------------------------------------|
-| [Bubble Sort](Algorithms/BubbleSort)                  |                          |  [Inventory Update](Algorithms/FCC-Algorithm/Inventory_Update)                            |
+| [Bubble Sort](Algorithms/BubbleSort)                  | [Sum All Primes](Algorithms/SumPrime)                         |  [Inventory Update](Algorithms/FCC-Algorithm/Inventory_Update)                            |
 | [Insertion Sort](Algorithms/Insertion%20Sort)         |                          |  [Make A Person](Algorithms/FCC-Algorithm/Make_A_Person)                                  |
 | [Selecton Sort (Python)](Algorithms/Selection%20Sort) |                          |  [Map The Debries](Algorithms/FCC-Algorithm/Map_The_Debries)                              |
 |                                                       |                          |  [Pairwise](Algorithms/FCC-Algorithm/Pairwise)                                            |
